@@ -1,0 +1,242 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* globales */
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 2rem 0;
+}
+h1 {
+    font-size: 3.8rem;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    transition:  font-size .3s ease-out;
+}
+a:hover {
+    color: blue;
+    font-size: 1.8rem;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.btn {
+    background-color:  #01D7F9;
+    display: block;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    transition: background-color .3s ease-out;
+}
+.btn:hover {
+    background-color: #02AAD7;
+    cursor: pointer;
+    color: white;
+}
+
+/* utilidades */
+.text-center {
+    text-align: center;
+}
+
+/* Header y navegacion */
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+.nombre-sitio span {
+    color: #005689;
+}
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+}
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .nav-principal {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+/* hero */
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+/* categorias */
+.categorias {
+    padding: 5rem 0;
+}
+.categoria {
+    margin-bottom: 0;
+}
+.categoria img {
+    width: 100%;
+}
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+}
+.categoria a:hover {
+    background-color: #005689;
+    color: #FFFFFF;
+    border-bottom-right-radius: 1rem;
+}
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* bloque sobre nosotros */
+.sobre-nosotros {
+    background-image: linear-gradient( to right, transparent 50%, #005689 50%, #005689), url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-size: 100%, 160rem;
+}
+.sobre-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+    column-gap: 10rem;
+}
+.texto-nosotros {
+    grid-column: 2 / 3;
+    color: #fff;
+    padding: 5rem;
+}
+
+/* lista de productos */
+.contenido-principal {
+    padding-top: 5rem;
+}
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+.producto:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.producto:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.producto {
+    background-color: #005689;
+    margin-bottom: 0;
+}
+.producto:last-of-type {
+    margin-bottom: 0;
+}
+.texto-producto {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 2rem;
+}
+.texto-producto h3 {
+    margin: 0;
+}
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+/* footer */
+.site-footer {
+    border-top: .2rem solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.site-footer h3 {
+    margin-bottom: .5rem;
+    text-align: center;
+}
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.grid-footer > div {
+    margin: 0;
+}
+.footer-menu a {
+    display: block;
+    text-align: center;
+}
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #000;
+    color: white;
+    margin-bottom: 0;
+}
